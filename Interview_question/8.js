@@ -23,14 +23,28 @@ const users = [
   },
 ];
 
-const isNameexist = (name, users) => {
-  for (let i = 0; i < users.length; i++) {
-    if (users[i].name === name) {
-      return users[i];
-    }
-  }
-  return -1
+// const isNameexist = (name, users) => {
+//   for (let i = 0; i < users.length; i++) {
+//     if (users[i].name === name) {
+//       return users[i];
+//     }
+//   }
+//   return -1;
+// };
+
+let isNameexist = (name, users) => {
+
+  //some function return true and false based on condition satisfied
+  // return users.some((user) => user.name === name);
+
+  //Return object from the array of objects
+  // return users.find((user)=>user.name === name)
+
+  //By Using FindIndex methods we get index of the array objects
+  const index = users.findIndex((user)=>user.name === name);
+  return index > 0 ? true : false
+
+
 };
 
-
-console.log(isNameexist("anand",users))
+console.log(isNameexist("Anand", users));
