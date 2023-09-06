@@ -15,7 +15,6 @@ Array.prototype.myFind = function(cb){
         }
     }
 
-
 }
 
 
